@@ -15,6 +15,23 @@ main() {
 }
 ```
 
+get year
+
+```
+
+
+```
+
+get month
+
+```
+```
+
+get day
+
+```
+```
+
 ## Features and bugs
 
 Please file feature requests and bugs at the [issue tracker][tracker].
@@ -24,6 +41,6 @@ Please file feature requests and bugs at the [issue tracker][tracker].
 
 # Credit..
 
-Website 1 :https://yan9a.github.io/mcal
+yan9a  :https://yan9a.github.io/mcal
 
-Website 2 :[http://cool-emerald.blogspot.com/2013/06/algorithm-program-and-calculation-of.html](http://cool-emerald.blogspot.com/2013/06/algorithm-program-and-calculation-of.html)
+Website 1 :[http://cool-emerald.blogspot.com/2013/06/algorithm-program-and-calculation-of.html](http://cool-emerald.blogspot.com/2013/06/algorithm-program-and-calculation-of.html)
