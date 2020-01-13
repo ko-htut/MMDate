@@ -17,6 +17,8 @@ main() {
 
 get MM-date
 ```
+Sting mmdate = jmmdate;
+//  နမှုနာ "  ၁၃၈၁ : ပြာသို : လဆုတ် ၄ ရက် : တနင်္လာ "
 ```
 
 get year
