@@ -17,9 +17,7 @@ class JMMDate {
 
 
   JMMDate();
-  
 //ဂျုလီယန်ရက်စုစုပေါင်း
-
   int _jdndaynocal() {
     var a = ((14 - _edate.month) ~/ 12);
     var y = (_edate.year + 4800 - a);
@@ -60,4 +58,6 @@ class JMMDate {
     var ja = (sy * _jdntommyear()) + mo;
     return ja;
   }
+
+  
 }
