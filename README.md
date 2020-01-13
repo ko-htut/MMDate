@@ -38,6 +38,10 @@ get day
 ```
 ```
 
+get date
+```
+```
+
 ## Features and bugs
 
 Please file feature requests and bugs at the [issue tracker][tracker].
