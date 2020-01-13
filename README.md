@@ -24,6 +24,8 @@ Sting mmdate = jmmdate;
 get year
 
 ```
+String mmyear = jmmdate.year;
+// နမှုနာ "၁၃၈၁"
 ```
 
 get month
