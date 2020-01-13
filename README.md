@@ -11,7 +11,7 @@ A simple usage example:
 import 'package:jdn_to_mmdate/jdn_to_mmdate.dart';
 
 main() {
-  var awesome = new Awesome();
+  String jmmdate = new JMMDate();
 }
 ```
 
