@@ -1,7 +1,7 @@
 name: mmdate
 description: Algorithm, Program and Calculation of Myanmar Date
 version: 1.0.21
-homepage: https://kohtut.dev/
+homepage: https://github.com/ko-htut/MMDate
 # publish_to: none
 # author: 
 #   - Ko Htut
@@ -11,4 +11,8 @@ environment:
 
 dependencies:
   flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
     sdk: flutter
