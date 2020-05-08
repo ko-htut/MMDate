@@ -1,4 +1,4 @@
 library mmdate;
 
-export 'src/my_mmdate.dart';
+export 'src/mmdate.dart';
 // TODO: Export any libraries intended for clients of this package.

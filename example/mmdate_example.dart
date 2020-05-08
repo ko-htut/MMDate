@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../lib/src/my_mmdate.dart';
+import '../lib/src/mmdate.dart';
 
 void main() => runApp(MyApp());
 
