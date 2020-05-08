@@ -8,23 +8,23 @@ Created from templates made available by Stagehand under a BSD-style
 A simple usage example:
 
 ```dart
-import 'package:jdn_to_mmdate/jdn_to_mmdate.dart';
+import 'package:mmdate/mmdate.dart';
 
 main() {
-  String jmmdate = new JMMDate();
+  String mmdate = new MMDate();
 }
 ```
 
 get MM-date
 ```
-Sting mmdate = jmmdate;
+Sting mmdate = mmdate;
 //  နမှုနာ "  ၁၃၈၁ : ပြာသို : လဆုတ် ၄ ရက် : တနင်္လာ "
 ```
 
 get year
 
 ```
-String mmyear = jmmdate.year;
+String mmyear = mmdate.year;
 // နမှုနာ "၁၃၈၁"
 ```
 
