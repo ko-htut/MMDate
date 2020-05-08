@@ -11,13 +11,13 @@ A simple usage example:
 import 'package:mmdate/mmdate.dart';
 
 main() {
-  String mmdate = new MMDate();
+  MMDate mmdate = new MMDate();
 }
 ```
 
 get MM-date
 ```
-Sting mmdate = mmdate;
+Sting mmdate = mmdate.date;
 //  နမှုနာ "  ၁၃၈၁ : ပြာသို : လဆုတ် ၄ ရက် : တနင်္လာ "
 ```
 
@@ -47,7 +47,7 @@ get date
 Please file feature requests and bugs at the [issue tracker][tracker].
 
 [tracker]: http://example.com/issues/replaceme
-# JDN-day-to-MM-date
+# Algorithm, Program and Calculation of Myanmar Date
 
 # Credit..
 

@@ -7,7 +7,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     MMDate mmdate = MMDate();
-    String jdn = mmdate.year();
+    String year = mmdate.year();
+    String date = mmdate.date();
     return MaterialApp(
       title: 'Material App',
       home: Scaffold(
@@ -16,7 +17,12 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           child: Container(
-            child: Text('Hello $jdn'),
+            child: Column(
+              children: <Widget>[
+                Text('Myanar $year'),
+                Text('Myanar $date'),
+              ],
+            ),
           ),
         ),
       ),

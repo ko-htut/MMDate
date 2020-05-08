@@ -8,7 +8,6 @@ class MMDate {
 //မြန်မာပြက္ခဒိန်မှာ စန္ဒြမာသ လ (lunar month) တစ်လကြာချိန်ကို ၁၅၇၇၉၁၇၈၂၈/၅၃၄၃၃၃၃၆ ( ၂၉.၅၃၀၅၈၇၉၅ ) ရက်
 // အဲဒီ ကိန်းသေကို LM
   var _lm = 1577917828 ~/ 53433336;
-  
 
 //ဂျုလီယန်ရက်စုစုပေါင်း
 // ဂျူလီယန် ရက်နံပါတ် ဆိုတာက ဂရီဂိုရီယမ် ပြက္ခဒိန် ၄၇၁၄ BC နိုဝင်ဘာ ၂၄ ရက်နေ့ နေ့လည် မွန်းတည့်ချိန်က စတင်ပြီး ရေတွက်လာတဲ့ ရက်အရေအတွက် စုစုပေါင်းဖြစ်ပါတယ်
@@ -70,10 +69,19 @@ class MMDate {
 
   _month() {}
 
+  _day() {}
+
   _extraday() {}
-  
-  String year(){
-    String year  =_jdntommyear();
+  String date() {
+    String year = _jdntommyear();
+    String month = _month();
+    String day = _day();
+    String date = " $year : $month : $day : $day ";
+    return date;
+  }
+
+  String year() {
+    String year = _jdntommyear();
     return year;
   }
 }
