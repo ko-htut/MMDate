@@ -1,10 +1,4 @@
-// TODO: Put public facing types in this file.
-// Checks if you are awesome. Spoiler: you are.
-class Awesome {
-  bool get isAwesome => true;
-}
-
-class JMMDate {
+class MMDate {
   var _edate = DateTime.now();
 //မြန်မာ ပြက္ခဒိန်မှာ သူရိယနှစ် တစ်နှစ်ရဲ့ ကြာချိန် (Solar Year) ကို ၁၅၇၇၉၁၇၈၂၈/၄၃၂၀၀၀၀ (၃၆၅.၂၅၈၇၅၆၅) ရက် လို့သတ်မှတ်ထား ပါတယ် [Irwin, 1909]။ အဲဒီ ကိန်းသေ ကို SY လို့ခေါ်လိုက် ပါမယ်။
   var _sy = 1577917828 ~/ 4320000;
@@ -13,13 +7,12 @@ class JMMDate {
   var _mo = 1954168.050623;
 //မြန်မာပြက္ခဒိန်မှာ စန္ဒြမာသ လ (lunar month) တစ်လကြာချိန်ကို ၁၅၇၇၉၁၇၈၂၈/၅၃၄၃၃၃၃၆ ( ၂၉.၅၃၀၅၈၇၉၅ ) ရက်
 // အဲဒီ ကိန်းသေကို LM
-  var _lm = 1577917828 ~/ 53433336 ; 
+  var _lm = 1577917828 ~/ 53433336;
 
-
-  JMMDate();
+  MMDate();
 //ဂျုလီယန်ရက်စုစုပေါင်း
 // ဂျူလီယန် ရက်နံပါတ် ဆိုတာက ဂရီဂိုရီယမ် ပြက္ခဒိန် ၄၇၁၄ BC နိုဝင်ဘာ ၂၄ ရက်နေ့ နေ့လည် မွန်းတည့်ချိန်က စတင်ပြီး ရေတွက်လာတဲ့ ရက်အရေအတွက် စုစုပေါင်းဖြစ်ပါတယ်
-   _jdndaynocal() {
+  jdndaynocal() {
     var a = ((14 - _edate.month) ~/ 12);
     var y = (_edate.year + 4800 - a);
     var m = _edate.month + (12 * a) - 3;
@@ -36,28 +29,28 @@ class JMMDate {
 
   //ဂျုလီယန် ရက်စွဲ
   //ဂျူလီယန် ရက်စွဲ (Julian Date) ဆိုတာကတော့ ဂျူလီယန် ရက်နံပါတ် ကိုပဲ အချိန် နာရီ၊ မိနစ်၊ စက္ကန့် တွေကိုပါ ဒဿမကိန်းပြောင်းပြီး ထည့်တွက်ထားတာပါ
-   _jdndate() {
-    _jdndaynocal();
+  jdndate() {
+    jdndaynocal();
     var df = (((_edate.hour) ~/ 24) +
         (_edate.minute ~/ 1440) +
         (_edate.second ~/ 86400));
-    var jd = _jdndaynocal() + df;
+    var jd = jdndaynocal() + df;
     print("test jdndate $jd");
     return jd;
   }
 
 //ဂျူလီယန်ရက်နံပါတ်မှ မြန်မာရက်သို့..
 //ရှာလိုတဲ့မြန်မာသက္ကရဇ် - my
-   _jdntommyear() {
-    var my = ((_jdndate() - 0.5 - _mo) ~/ _sy);
+  jdntommyear() {
+    var my = ((jdndate() - 0.5 - _mo) ~/ _sy);
     return my;
   }
 
 //မြန်မာနစ်အစ
 //ရှာလိုတဲ့နစ်ရဲ့ - ဂျုလီယန် ရက်တန်ဖိုး - နှစ်ဆန်းချိန်ရဲ့ ဂျူလီယန် ရက်တန်ဖိုး အဖြေ - ja
 //နှစ်တချို့ရဲ့ သိပြီးသား နှစ်ဆန်းချိန် တွေကို ja မှာ အစားထိုးပြီး၊ ပျမ်းမျှရှာပြီး ခန့်မှန်း တဲ့အခါ MO ကို ဂျူလီယန်ရက်တန်ဖိုး 1954168.050623 - MO
-  _jdnmmdaystart() {
-    var ja = (_sy * _jdntommyear()) + _mo;
+  jdnmmdaystart() {
+    var ja = (_sy * jdntommyear()) + _mo;
     return ja;
   }
 //မြန်မာနစ် သင်္ကြန်ကျချိန်.. jk (ဂျုလီယန်)
@@ -65,21 +58,17 @@ class JMMDate {
 // မြန်မာ ပြက္ခဒိန် အကြံပေး အဖွဲ့ က အသိအမှတ်ပြုတဲ့ သင်္ကြန်ကာလက ၂.၁၆၉၉၁၈၉၈၂ ရက် (၂ ရက်၊ ၄ နာရီ၊ ၄ မိနစ်၊ ၄၁ စက္ကန့်) ဖြစ်ပြီး၊
 // ရှေးမြန်မာ မင်းများ လက်ထက်ကတော့ ၂.၁၆၇၅ ရက် (၂ ရက်၊ ၄ နာရီ၊ ၁ မိနစ်၊ ၁၂ စက္ကန့်) ကို သုံးပါတယ်
 
- _tgmmdaystart(){
-   var jk;
-   if (_jdntommyear() >= 1312){
-     jk = _jdnmmdaystart() - 2.169918982 ;
-   }else{
-     jk = _jdnmmdaystart() - 2.1675;
-   }
-   return jk;
- }
- _mmmonth(){
+  tgmmdaystart() {
+    var jk;
+    if (jdntommyear() >= 1312) {
+      jk = jdnmmdaystart() - 2.169918982;
+    } else {
+      jk = jdnmmdaystart() - 2.1675;
+    }
+    return jk;
+  }
 
- }
+  mmmonth() {}
 
- _extraday(){
-
-   
- }
+  extraday() {}
 }

@@ -1,13 +1,14 @@
 name: mmdate
-description: Algorithm, Myanmar Date
-version: 1.0.0
+description: Algorithm,Myanmar Date ()
+version: 1.0.1
 homepage: https://kohtut.dev/
-author: 
-  - Ko Htut
-
-dependencies:
- path: ^1.6.0
+# publish_to: none
+# author: 
+#   - Ko Htut
 
 environment:
-  sdk: '>=1.19.0 <3.0.0'
-  flutter: ^0.1.2
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
