@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:mmdate/mmdate.dart';
 
 class MMDate {
@@ -84,7 +85,7 @@ class MMDate {
   ///Day now
   ///
   ///လက်၇ှိ၇ောက်နေသာ၇က်ကို အလိုအလျောက်မြန်မာလိုတွက်ချက်ပါသည်
-  String  now() {
+  String now() {
     String year = _jdntommyear();
     String month = _month();
     String day = _day();
@@ -112,5 +113,10 @@ class MMDate {
   String day() {
     String day = _day();
     return day;
+  }
+
+  String nextday({@required int nettime}) {
+    String non = "";
+    return non;
   }
 }

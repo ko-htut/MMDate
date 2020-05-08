@@ -32,14 +32,19 @@ get month
 
 ```
 String mmonth = mmdate.month();
+// နမှုနာ တော်သလင်းလ
 ```
 
 get day
-
 ```
 String mmday = mmdate.day();
+//နမှုနာ သောကြာ
 ```
-
+get nextday
+```
+String mmnextday = mmdate.nextday(10);
+//နမှုနာ ယနေ့၇က်မှစပြီးနောက်ထပ် ၁၀ ၇က်မြောက်နေ့ ၇က်စွဲအား တွက်ချက်ပါသည် ။
+```
 ## Features and bugs
 
 Please file feature requests and bugs at the [issue tracker][tracker].
