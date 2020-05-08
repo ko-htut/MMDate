@@ -1,8 +1,5 @@
 // TODO: Put public facing types in this file.
-
-import 'dart:html';
-
-/// Checks if you are awesome. Spoiler: you are.
+// Checks if you are awesome. Spoiler: you are.
 class Awesome {
   bool get isAwesome => true;
 }

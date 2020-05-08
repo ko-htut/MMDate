@@ -1,4 +1,4 @@
-import 'package:mmdate/jdn_to_mmdate.dart';
+import 'package:mmdate/mmdate.dart';
 
 main() {
   var awesome = Awesome();
