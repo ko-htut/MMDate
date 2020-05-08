@@ -7,7 +7,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     MMDate mmdate = MMDate();
-    String jdn = mmdate.jdndaynocal();
+    String jdn = mmdate.year();
     return MaterialApp(
       title: 'Material App',
       home: Scaffold(
