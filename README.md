@@ -17,29 +17,27 @@ main() {
 
 get MM-date
 ```
-Sting mmdate = mmdate.date;
+Sting mmdate = mmdate.now();
 //  နမှုနာ "  ၁၃၈၁ : ပြာသို : လဆုတ် ၄ ရက် : တနင်္လာ "
 ```
 
 get year
 
 ```
-String mmyear = mmdate.year;
+String mmyear = mmdate.year();
 // နမှုနာ "၁၃၈၁"
 ```
 
 get month
 
 ```
+String mmonth = mmdate.month();
 ```
 
 get day
 
 ```
-```
-
-get date
-```
+String mmday = mmdate.day();
 ```
 
 ## Features and bugs

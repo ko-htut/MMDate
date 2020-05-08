@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     MMDate mmdate = MMDate();
     String year = mmdate.year();
-    String date = mmdate.date();
+    String date = mmdate.now();
     return MaterialApp(
       title: 'Material App',
       home: Scaffold(
