@@ -1,5 +1,6 @@
-A library for Dart developers.
+MMDate library for Dart developers.
 
+[![Pub package](https://img.shields.io/pub/v/stagehand.svg)](https://pub.dev/packages/stagehand)
 Created from templates made available by Stagehand under a BSD-style
 [license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
 
