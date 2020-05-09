@@ -1,9 +1,9 @@
 name: mmdate
-description: Algorithm, Program and Calculation of Myanmar Date 
+description: It is a lib that can convert English Date into Myanmar Date. When conversion dates are calculated, based on the date of JDN date ..
 version: 1.0.3
 homepage: https://github.com/ko-htut/MMDate
 # publish_to: none
-# author: 
+# author:
 #   - Ko Htut
 
 environment:
