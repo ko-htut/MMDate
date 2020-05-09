@@ -18,18 +18,46 @@ class MMDate {
   ///မြန်မာ ဝါမထပ်သော လ
   ///
   ///သာမန်နှစ်၏ မြန်မာလများ
-  static const mmonth1no = [29, 30, 29, 30, 29, 30, 29, 30, 29, 30, 29, 30];
+  static List<int> mmonth1no = [29, 30, 29, 30, 29, 30, 29, 30, 29, 30, 29, 30];
 
   ///မြန်မာ ဝါငယ်ထပ်သောလ
-  static const mmonth2no = [29, 30, 29, 30, 30, 29, 30, 29, 30, 29, 30, 29, 30];
+  static List<int> mmonth2no = [
+    29,
+    30,
+    29,
+    30,
+    30,
+    29,
+    30,
+    29,
+    30,
+    29,
+    30,
+    29,
+    30
+  ];
 
   ///မြန်မာ ဝါကြီးထပ်သောလ
-  static const mmonth3no = [29, 30, 30, 30, 30, 29, 30, 29, 30, 29, 30, 29, 30];
+  static List<int> mmonth3no = [
+    29,
+    30,
+    30,
+    30,
+    30,
+    29,
+    30,
+    29,
+    30,
+    29,
+    30,
+    29,
+    30
+  ];
 
   ///မြန်မာ ဝါမထပ်သော လ
   ///
   ///သာမန်နှစ်၏ မြန်မာလများ
-  static const mmonthname = [
+  static List<String> mmonthname = [
     "တန်ခူး",
     "ကဆုန်",
     "နယုန်",
@@ -45,7 +73,7 @@ class MMDate {
   ];
 
   ///မြန်မာ ဝါငယ်ထပ်သောလ
-  static const mmonthname2 = [
+  static List<String> mmonthname2 = [
     "တန်ခူး",
     "ကဆုန်",
     "နယုန်",
@@ -62,7 +90,7 @@ class MMDate {
   ];
 
   ///မြန်မာ ဝါကြီးထပ်သောလ
-  static const mmonthname3 = [
+  static List<String> mmonthname3 = [
     "တန်ခူး",
     "ကဆုန်",
     "နယုန်",
@@ -77,7 +105,7 @@ class MMDate {
     "တပို့တွဲ",
     "တပေါင်း"
   ];
-  static const mmonthnameEN = [
+  static List<String> mmonthnameEN = [
     "Tagu",
     "Kason",
     "Nayon",
@@ -91,7 +119,7 @@ class MMDate {
     "Tabodwe",
     "Tabaung"
   ];
-  static const mmonthnameEN2 = [
+  static List<String> mmonthnameEN2 = [
     "Tagu",
     "Kason",
     "Nayon",
@@ -106,7 +134,7 @@ class MMDate {
     "Tabodwe",
     "Tabaung"
   ];
-  static const mmonthnameEN3 = [
+  static List<String> mmonthnameEN3 = [
     "Tagu",
     "Kason",
     "Nayon",
@@ -122,11 +150,11 @@ class MMDate {
     "Tabaung"
   ];
 
-  static const mmdayMM = ["တနင်္လာ", "အင်"];
-  static const mmdayEN = ["Monday", ""];
+  static List<String> mmdayMM = ["တနင်္လာ", "အင်"];
+  static List<String> mmdayEN = ["Monday", ""];
 
-  static const mahaboteMM = [""];
-  static const mahaboteEN = [""];
+  static List<String> mahaboteMM = [""];
+  static List<String> mahaboteEN = [""];
 
   ///[MMDate] English Date မှ မြန်မာ၇က်စွဲသို့ ပြောင်းလဲပေးနိင်သော lib ဖြစ်ပါသည်...။ Eng Date များအား ပြောင်းလဲတွက်သောအခါ..JDN date သတ်မှတ်ချက်အပေါ်အခြေခံ ထားပါသည်.. ၊ ထိုနောက် မြန်မာ ပြက္ခဒိန် သို့ပြောင်းလဲတွက်ချက်သောအခါ တွက်ချက်မှုအားလုံးက မြန်မာစံတော်ချိန် (Myanmar Standard Time UTC+06:30 ) ပေါ်မှာ အခြေခံထားပြီး အဲဒါက လောင်ဂျီကျု ၉၇° ၃၀' ပေါ်မှာ အခြေခံပါတယ်။
   MMDate();
@@ -195,7 +223,7 @@ class MMDate {
   ///နစ်တစ်နစ်၇ဲ့ အစ ကနေ သင်္ကြန်ကျချိန်ကနေ သင်္ကြန်ကျတဲ့ ကာလ ကို နုတ်,,
   ///
   /// မြန်မာ ပြက္ခဒိန် အကြံပေး အဖွဲ့ က အသိအမှတ်ပြုတဲ့ သင်္ကြန်ကာလက ၂.၁၆၉၉၁၈၉၈၂ ရက် (၂ ရက်၊ ၄ နာရီ၊ ၄ မိနစ်၊ ၄၁ စက္ကန့်) ဖြစ်ပြီး၊
-  /// 
+  ///
   /// ရှေးမြန်မာ မင်းများ လက်ထက်ကတော့ ၂.၁၆၇၅ ရက် (၂ ရက်၊ ၄ နာရီ၊ ၁ မိနစ်၊ ၁၂ စက္ကန့်) ကို သုံးပါတယ်
   _tgmmdaystart() {
     var jk;
