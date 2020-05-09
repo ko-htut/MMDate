@@ -4,16 +4,16 @@ class MMDate {
   ///မြန်မာ ၇က်နံပါတ်
   ///
   ///Myanmar Day [int no]
-  int mmday;
+  static int mmday;
 
   ///မြန်မာလ နံပါတ်
   ///
   ///Myanmar Month [int no]
-  int mmmonth;
+  static int mmmonth;
 
   ///မြန်မာနှစ် နံပါတ်
   /// Myanmar Year [int no]
-  int mmyear;
+  static int mmyear;
 
   ///မြန်မာ ဝါမထပ်သော လ
   ///
