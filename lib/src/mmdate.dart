@@ -29,6 +29,9 @@ class MMDate {
   ///မြန်မာ ဝါကြီးထပ်သောလ
   static const mmonth3no = [29, 30, 30, 30, 30, 29, 30, 29, 30, 29, 30, 29, 30];
 
+  ///မြန်မာ ဝါမထပ်သော လ
+  ///
+  ///သာမန်နှစ်၏ မြန်မာလများ
   static const mmonthname = [
     "တန်ခူး",
     "ကဆုန်",
@@ -43,22 +46,9 @@ class MMDate {
     "တပို့တွဲ",
     "တပေါင်း"
   ];
-    static const mmonthname2 = [
-    "တန်ခူး",
-    "ကဆုန်",
-    "နယုန်",
-    "ပထမ ဝါဆို",
-    "ဒုတိယ ဝါဆို",
-    "ဝါခေါင်",
-    "တော်သလင်း",
-    "သီတင်းကျွတ်",
-    "တန်ဆောင်မုန်း",
-    "နတ်တော်",
-    "ပြာသို",
-    "တပို့တွဲ",
-    "တပေါင်း"
-  ];
-    static const mmonthname3 = [
+
+  ///မြန်မာ ဝါငယ်ထပ်သောလ
+  static const mmonthname2 = [
     "တန်ခူး",
     "ကဆုန်",
     "နယုန်",
@@ -74,7 +64,74 @@ class MMDate {
     "တပေါင်း"
   ];
 
-  ///MMDate English Date မှ မြန်မာ၇က်စွဲသို့ ပြောင်းလဲပေးနိင်သော lib ဖြစ်ပါသည်...။ Eng Date များအား ပြောင်းလဲတွက်သောအခါ..JDN date သတ်မှတ်ချက်အပေါ်အခြေခံ ထားပါသည်.. ၊ ထိုနောက် မြန်မာ ပြက္ခဒိန် သို့ပြောင်းလဲတွက်ချက်သောအခါ တွက်ချက်မှုအားလုံးက မြန်မာစံတော်ချိန် (Myanmar Standard Time UTC+06:30 ) ပေါ်မှာ အခြေခံထားပြီး အဲဒါက လောင်ဂျီကျု ၉၇° ၃၀' ပေါ်မှာ အခြေခံပါတယ်။
+  ///မြန်မာ ဝါကြီးထပ်သောလ
+  static const mmonthname3 = [
+    "တန်ခူး",
+    "ကဆုန်",
+    "နယုန်",
+    "ပထမ ဝါဆို",
+    "ဒုတိယ ဝါဆို",
+    "ဝါခေါင်",
+    "တော်သလင်း",
+    "သီတင်းကျွတ်",
+    "တန်ဆောင်မုန်း",
+    "နတ်တော်",
+    "ပြာသို",
+    "တပို့တွဲ",
+    "တပေါင်း"
+  ];
+  static const mmonthnameEN = [
+    "Tagu",
+    "Kason",
+    "Nayon",
+    "Waso",
+    "Wagaung",
+    "Tawthalin",
+    "Thadingyut",
+    "Tazaungmon",
+    "Nadaw",
+    "Pyatho",
+    "Tabodwe",
+    "Tabaung"
+  ];
+  static const mmonthnameEN2 = [
+    "Tagu",
+    "Kason",
+    "Nayon",
+    "First Waso",
+    "Second Waso",
+    "Wagaung",
+    "Tawthalin",
+    "Thadingyut",
+    "Tazaungmon",
+    "Nadaw",
+    "Pyatho",
+    "Tabodwe",
+    "Tabaung"
+  ];
+  static const mmonthnameEN3 = [
+    "Tagu",
+    "Kason",
+    "Nayon",
+    "First Waso",
+    "Second Waso",
+    "Wagaung",
+    "Tawthalin",
+    "Thadingyut",
+    "Tazaungmon",
+    "Nadaw",
+    "Pyatho",
+    "Tabodwe",
+    "Tabaung"
+  ];
+
+  static const mmdayMM = ["တနင်္လာ", "အင်"];
+  static const mmdayEN = ["Monday", ""];
+
+  static const mahaboteMM = [""];
+  static const mahaboteEN = [""];
+
+  ///[MMDate] English Date မှ မြန်မာ၇က်စွဲသို့ ပြောင်းလဲပေးနိင်သော lib ဖြစ်ပါသည်...။ Eng Date များအား ပြောင်းလဲတွက်သောအခါ..JDN date သတ်မှတ်ချက်အပေါ်အခြေခံ ထားပါသည်.. ၊ ထိုနောက် မြန်မာ ပြက္ခဒိန် သို့ပြောင်းလဲတွက်ချက်သောအခါ တွက်ချက်မှုအားလုံးက မြန်မာစံတော်ချိန် (Myanmar Standard Time UTC+06:30 ) ပေါ်မှာ အခြေခံထားပြီး အဲဒါက လောင်ဂျီကျု ၉၇° ၃၀' ပေါ်မှာ အခြေခံပါတယ်။
   MMDate();
   var _edate = DateTime.now();
 
@@ -157,18 +214,29 @@ class MMDate {
   ///Day now
   ///
   ///လက်၇ှိ၇ောက်နေသာ၇က်ကို အလိုအလျောက်မြန်မာလိုတွက်ချက်ပါသည်
-  String now() {
+  ///
+  ///eng:true (Sasana Year 2564 , Myanmar Year 1382 , Kason waning 3 , Saturday .)
+  ///
+  ///eng:false or null (စန္ဒမာနှစ် ၂၅၆၄,မြန်မာနှစ် ၁၃၈၂ ,ကဆုန် လပြည့်ကျော် ၃ရက် ,စနေနေ့ )
+  String now({bool eng = false}) {
     String year = _jdntommyear();
     String month = _month();
     String day = _day();
-    String date = " $year : $month : $day : $day ";
-    return date;
+    if (eng = false) {
+      String date = " $year : $month : $day : $day ";
+      return date;
+    } else {
+      String date = " $year : $month : $day : $day ";
+      return date;
+    }
   }
 
   ///လက်၇ှိ၇ောက်နေသောနှစ်
   ///
+  ///eng:true (Sasana Year 2564,Myanmar Year 1382)
   ///
-  String year() {
+  ///eng:false or null (စန္ဒမာနှစ် ၂၅၆၄,မြန်မာနှစ် ၁၃၈၂ )
+  String year({bool eng = false}) {
     String year = _jdntommyear();
     return year;
   }
